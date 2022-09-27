@@ -9,7 +9,7 @@
 
 https://user-images.githubusercontent.com/60105252/179119707-068dfca3-6bec-426b-b08b-5f8930828750.mp4
 
-This
+This and that
 
 We at [Reibase](https://reibase.rs) created the open-source protocol Turbosrc. It only allows token holders to engage with pull requests. Maintainers create tokens for their project via Turbosrc. They can distribute or sell these into their communities. Token holders vote on pull requests - accept or deny. Each project (likely maintainers) creates their own set of tokens.
 
