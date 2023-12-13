@@ -161,3 +161,8 @@ If you want ci/cd automatically configured for you (run end-to-end tests or want
   <img src="./images/turbosrc-repo.png" alt="TurboSrc Node Structure" width="61%"/>
 </p>
 
+#### Each Node has an API, where actions trigger susbsystem functionionality.
+
+<p align="left">
+  <img src="./images/turbosrc-node-function.png" alt="TurboSrc Node Structure" width="61%"/>
+</p>
