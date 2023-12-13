@@ -146,3 +146,18 @@ If you want ci/cd automatically configured for you (run end-to-end tests or want
 - workflow
 
 [See here if you need help getting the token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+## How it works
+
+#### TurboSrc works currently only on Github repos, but it works off the git level so it will be expanded to other codehosts (in due time).
+
+<p align="left">
+  <img src="./images/turbosrc-node.png" alt="TurboSrc Node Structure" width="61%"/>
+</p>
+
+#### Each Github repo owner can distribute VotePower to it's community, or whomever.
+
+<p align="left">
+  <img src="./images/turbosrc-repo.png" alt="TurboSrc Node Structure" width="61%"/>
+</p>
+
