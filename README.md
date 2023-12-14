@@ -207,3 +207,9 @@ If you want ci/cd automatically configured for you (run end-to-end tests or want
 <p align="left">
   <img src="./images/turbosrc-node-to-client.png" alt="TurboSrc Node Structure" width="61%"/>
 </p>
+
+#### Or it can be connected with a TurboSrc router, to network several nodes managing repos.
+
+<p align="left">
+  <img src="./images/turbosrc-node-to-router-to-client.png" alt="TurboSrc Node Structure" width="61%"/>
+</p>
