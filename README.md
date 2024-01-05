@@ -74,9 +74,11 @@ Add a `turbosrc.config` file to the project directory.
 {
     "GithubName": "yourGithubName",
     "GithubApiToken": "ghp_...",
+    "Secret": "deprecated",
     "Mode": "online"
 }
 ```
+Secret is deprecated in online mode, so you can put anything as Secret field value, including "deprecated" or even "".
 
 Initialize.
 
@@ -145,7 +147,88 @@ If you want ci/cd automatically configured for you (run end-to-end tests or want
 - delete repo
 - workflow
 
+## Testing
+
+`tubosrc.config` should be in local mode.
+
+
+To initialize.
+
+```
+./tsrc-dev init --testers
+```
+
+Build extension. For some reason `sudo` may be necessary, but this should be resolved.
+
+```
+yarn devLocal
+```
+
+Start everything
+
+```
+./tsrc-dev start
+```
+
+And then run tests.
+
+```
+./tsrc-dev test --visual <username> demo run_tests
+```
+
+### Visual
+
+`tubosrc.config` should be in local mode. You'll need a GithubPassword field, too.
+
+You'll also need a `.env` in the project root directory:
+
+```
+UID=1000
+GID=1000
+```
+
+To initialize with visual testing.
+
+```
+./tsrc-dev init --testers --visual
+```
+
+```
+./tsrc-dev start
+```
+
+Start viatui, the visual server
+
+```
+./tsrc-dev start-viatui
+```
+
+**In a seperate terminal window do following commands.**
+
+```
+./tsrc-dev test --visual <username> demo run_tests
+```
+
 [See here if you need help getting the token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+
+## Other
+
+Github actions secrets need to be base64 encoded.
+
+Example:
+
+Encode.
+
+```
+base64 -i .tester_fields_for_turbosrc_service.json > .tester_fields_for_turbosrc_service.base64
+```
+Decode.
+
+```
+base64 -d -i .tester_fields_for_turbosrc_service.base64 > decoded_file.txt
+```
+
 
 ## TurboSrc in-depth
 
